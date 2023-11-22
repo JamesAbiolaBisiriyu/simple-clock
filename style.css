@@ -40,6 +40,7 @@ body {
   position: absolute;
   width: 6px;
   height: 100%;
+  background: #b8b8c5;
   z-index: 0;
   left: 49%;
 }
@@ -47,7 +48,7 @@ body {
 .outer-clock-face .marking {
   background: #bdbdcb;
   width: 3px;
-}
+} 
 
 .outer-clock-face .marking.marking-one{
   transform: rotate(30deg);
@@ -55,11 +56,15 @@ body {
 
 .outer-clock-face .marking.marking-two {
   transform: rotate(60deg);
-}
-.outer-clock-face.marking.marking.marking-three {
+} 
+ .outer-clock-face .marking.marking.marking-three {
+  transform: rotate(120deg);
+}   
+
+.outer-clock-face .marking.marking.marking-four {
   transform: rotate(150deg);
 } 
-.inner-clock-face {
+ .inner-clock-face {
   position: absolute;
   top: 10%;
   left: 10%;
@@ -68,6 +73,46 @@ body {
   background: #fefefc;
   border-radius: 100%;
   z-index: 1;
-}
+}  
+
+ .inner-clock-face::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 18px;
+  margin-left: -9px;
+  margin-top: -6px;
+  background: #4d4b63;
+  z-index: 11;
+} 
+ .hand {
+  width: 50%;
+  right: 50%;
+  height: 6px;
+  background: #61afff;
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+} 
+
+.hand.hour-hand {
+  width: 20%;
+  z-index: 3;
+} 
+.hand.min-hand {
+  height: 3px;
+  z-index: 10;
+  width: 35%;
+} 
+ .hand.second-hand {
+  width: 40%;
+  background: #ff5e5e;
+} 
 
 
