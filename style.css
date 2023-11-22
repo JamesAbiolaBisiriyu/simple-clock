@@ -1,10 +1,36 @@
 body {
+  margin: 0;
+  background-color: #f0f0f0;
+  /* display: flex;
+  justify-content: center; */
+
+ }
+
+ .headin {
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+ }
+
+ .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
+  /* border: 5px solid #ff5e5e; */
+  
+
+  h1  {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+
+
+
+
  }
 .clock{
   width: 30rem;
